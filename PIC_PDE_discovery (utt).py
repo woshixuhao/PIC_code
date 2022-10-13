@@ -983,7 +983,7 @@ for t in range(3000):
 
     coef = Variable(torch.from_numpy(lst.astype(np.float32))).cuda()
     a = PINNLossFunc(h_data_choose)
-    if iter<len(re1_t):
+    if best_PDE_index<len(re1_t):
         loss = a(prediction, Ht, coef, 1e8, Library_cuda)
     else:
         loss = a(prediction, Htt, coef,1e8, Library_cuda)
