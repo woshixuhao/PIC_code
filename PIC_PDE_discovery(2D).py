@@ -652,7 +652,7 @@ def Generate_meta_data_2D(Net,Equation_name, choose, noise_level, trail_num, Loa
             for i in range(nt):
                 data[0] = x[j]
                 data[1]=y[k]
-                data[1] = t[i]
+                data[2] = t[i]
                 database[num] = data
                 num += 1
 
